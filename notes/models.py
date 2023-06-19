@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -16,5 +17,7 @@ class Notes(models.Model):
     # created field is populated with time that note
     # is created
     created = models.DateTimeField(auto_now_add=True)
+    # this is to associate every post to user
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="notes")
 
 

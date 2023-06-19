@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import Http404
+from django.http.response import HttpResponseRedirect
 from django.views.generic import UpdateView, CreateView, DetailView, ListView
 from django.views.generic.edit import DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Notes
 from .forms import NotesForm
 
@@ -16,6 +18,12 @@ class NotesCreateView(CreateView):
     success_url = "/smart/notes"
     form_class = NotesForm
 
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return HttpResponseRedirect(self.get_success_url())
+
 
 class NotesUpdateView(UpdateView):
     model = Notes
@@ -23,10 +31,18 @@ class NotesUpdateView(UpdateView):
     form_class = NotesForm
 
 
-class NotesListView(ListView):
+class NotesListView(LoginRequiredMixin, ListView):
     model = Notes
     context_object_name = "notes"
     template_name = "notes/notes_list.html"
+    # if the user tries to access the list but not logged
+    # in than they will be directed to admin page
+    login_url = "/admin"
+
+    # now end point is requiring  user authentication
+    # and uses the user of that request
+    def get_queryset(self):
+        return self.request.user.notes.all()
 
 
 # def list(request):
