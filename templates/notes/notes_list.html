@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +7,16 @@
 
 
 </head>
+{% block content %}
 <body>
 
     <h1> These are the notes:</h1>
 <ul>
     {% for note in notes %}
-        <li>{{note.title}}</li>
+        <li class="note-li">{{note.title}}</li>
     {% endfor %}
 </ul>
 
 </body>
+{% endblock %}
 </html>
