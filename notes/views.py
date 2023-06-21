@@ -12,11 +12,13 @@ class NotesDeleteView(DeleteView):
     model = Notes
     success_url = '/smart/notes'
     template_name = "notes/notes_delete.html"
+    login_url = '/login'
 
 class NotesCreateView(CreateView):
     model = Notes
     success_url = "/smart/notes"
     form_class = NotesForm
+    login_url = '/login'
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -37,7 +39,7 @@ class NotesListView(LoginRequiredMixin, ListView):
     template_name = "notes/notes_list.html"
     # if the user tries to access the list but not logged
     # in than they will be directed to admin page
-    login_url = "/admin"
+    login_url = "/login"
 
     # now end point is requiring  user authentication
     # and uses the user of that request
@@ -54,6 +56,8 @@ class NotesDetailView(DetailView):
     model = Notes
     context_object_name = "note"
     template_name = "notes/notes_detail.html"
+    login_url = 'login'
+
 
 # def detail(request,pk):
 #     try:
