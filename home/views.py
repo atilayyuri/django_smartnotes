@@ -3,9 +3,15 @@ from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView, LogoutView
 
 
-# Create your views here.
+class LogoutInterfaceView(LogoutView):
+    template_name = 'home/logout.html'
+
+
+class LoginInterfaceView(LoginView):
+    template_name = 'home/login.html'
 
 
 class HomeView(TemplateView):
@@ -19,7 +25,7 @@ class HomeView(TemplateView):
 # if a user is not logged in, it redirects to the /admin
 # endpoint to login
 
-class AuthorizedView(LoginRequiredMixin,TemplateView):
+class AuthorizedView(LoginRequiredMixin, TemplateView):
     template_name = 'home/authorized.html'
     login_url = '/admin'
 
