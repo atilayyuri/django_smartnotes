@@ -16,9 +16,10 @@ Ensure that you have [Python](https://www.python.org/downloads/) Version >= 3.8.
 
 - Setup the environment by executing below in order (for Windows ```.\venv\Scripts\activate.bat``` )
 ```
+cd django_smartnotes
 python -m venv venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r .\smartnotes\requirements.txt
 ``` 
 
 ## Execution
