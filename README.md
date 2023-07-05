@@ -21,7 +21,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ``` 
 
+## Execution
+```
+python manage.py runserver
+```
 
+Signup with username and password to use the app. 
 
     
 
