@@ -14,12 +14,12 @@ Ensure that you have [Python](https://www.python.org/downloads/) Version >= 3.8.
 
 - Clone this repository to your local machine using ```git clone https://github.com/atilayyuri/django_smartnotes.git```
 
-- Setup the environment by executing below in order (for Windows ```.\venv\Scripts\activate.bat``` )
+- Setup the environment by executing below in order (for Windows ```.\venv\Scripts\activate.bat```, make sure you are using cmd instead of PowerShell )
 ```
 cd django_smartnotes
 python -m venv venv
 source .venv/bin/activate
-pip install -r .\smartnotes\requirements.txt
+python -m pip install -r .\smartnotes\requirements.txt
 ``` 
 
 ## Execution
