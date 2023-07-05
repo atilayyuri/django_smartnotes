@@ -37,6 +37,7 @@ class NotesListView(LoginRequiredMixin, ListView):
     model = Notes
     context_object_name = "notes"
     template_name = "notes/notes_list.html"
+    #extra_context = {'user': Notes.objects.all()}
     # if the user tries to access the list but not logged
     # in than they will be directed to admin page
     login_url = "/login"
