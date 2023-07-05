@@ -3,4 +3,12 @@
 
 <h1>Hope to see you soon :)</h1>
 
+    {% block extrahead %}{{ block.super }}
+    <script type="text/javascript">
+        setTimeout(function() {
+            window.location.href = "{% url 'home'%}";
+        }, 2000);
+    </script>
+    {% endblock %}
+
 {% endblock %}
