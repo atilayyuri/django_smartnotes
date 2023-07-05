@@ -6,7 +6,7 @@ Created by Atilay Tamkan <tamkan.atilay@gmail.com>
 
 ## Features
 
-- User specific posts: After authentication, the user can see their posts in the order, edit or delete them.
+- User-specific posts: After authentication, the user can see their posts in order, edit or delete if they wish.
 
 ## Setup
 
