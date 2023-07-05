@@ -1,4 +1,4 @@
-# django_smartnotes Introduction
+# django_smartnotes
 
 This repository adds another CRUD app to the sea of sad CRUD apps. It is written in *Python* using **django** framework with the intention to set the first stepping stone into django world.
 
