@@ -12,7 +12,7 @@ Created by Atilay Tamkan <tamkan.atilay@gmail.com>
 
 Ensure that you have [Python](https://www.python.org/downloads/) Version >= 3.8.
 
-- Clone this repository to your local machine using 'git clone https://github.com/atilayyuri/django_smartnotes.git'
+- Clone this repository to your local machine using ```git clone https://github.com/atilayyuri/django_smartnotes.git```
 
 - Setup the environment by executing below in order (for Windows ```.\venv\Scripts\activate.bat``` )
 ```
