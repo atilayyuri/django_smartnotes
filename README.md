@@ -14,7 +14,7 @@ Ensure that you have [Python](https://www.python.org/downloads/) Version >= 3.8.
 
 - Clone this repository to your local machine using ```git clone https://github.com/atilayyuri/django_smartnotes.git```
 
-- Setup the environment by executing below in order (to activate venv on Windows use ```.\venv\Scripts\Activate.ps1```, make sure you are using cmd instead of PowerShell and use ```Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force``` if you got authorization errors)
+- Setup the environment by executing below in order (to activate venv on Windows use ```.\venv\Scripts\Activate.ps1```, for PowerShell or ```.\venv\Scripts\activate.bat``` for cmd. Use ```Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force``` if you got authorization errors)
 ```
 cd django_smartnotes
 python -m venv venv
