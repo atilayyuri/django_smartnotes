@@ -18,7 +18,7 @@ Ensure that you have [Python](https://www.python.org/downloads/) Version >= 3.8.
 ```
 cd django_smartnotes
 python -m venv venv
-source .venv/bin/activate
+source venv/bin/activate
 python -m pip install -r ./smartnotes/requirements.txt
 ``` 
 
